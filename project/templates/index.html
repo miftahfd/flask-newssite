@@ -29,9 +29,9 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav ml-auto">
-          {% for item in menu %}
+          {% for item in categories %}
           <li class="nav-item">
-            <a class="nav-link" href="#">{{item}}</a>
+            <a class="nav-link" href="#">{{item.title}}</a>
           </li>
           {% endfor %}
       </div>
@@ -41,8 +41,10 @@
   <!-- Content section -->
   <section class="py-5">
     <div class="container">
-      <h1>Judul</h1>
-      <p>Isi</p>
+      {% for item in news %}
+        <h1>{{item.title}}</h1>
+        <p>{{item.content}}</p>
+      {% endfor %}
     </div>
   </section>
 
